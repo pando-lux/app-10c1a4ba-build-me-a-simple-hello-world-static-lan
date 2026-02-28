@@ -1,7 +1,7 @@
 {
   "version": 2,
   "projectId": "10c1a4ba5e5ee89391db4ebb",
-  "exportedAt": 1772275322602,
+  "exportedAt": 1772276681688,
   "team": {
     "blueprint": [
       {
@@ -9,6 +9,11 @@
         "type": "orchestrator",
         "templateId": null,
         "children": [
+          {
+            "role": "devops",
+            "type": "worker",
+            "templateId": "builtin:devops"
+          },
           {
             "role": "tester",
             "type": "worker",
@@ -23,13 +28,26 @@
       }
     ],
     "stats": {
-      "totalWorkersSpawned": 2,
+      "totalWorkersSpawned": 3,
       "totalBudgetSpent": 0,
       "firstCreated": "2026-02-28T10:36:48.556Z",
-      "lastActive": "2026-02-28T10:41:33.229Z"
+      "lastActive": "2026-02-28T11:04:09.040Z"
     }
   },
   "agents": [
+    {
+      "id": "worker-devops-570b794d",
+      "role": "devops",
+      "type": "worker",
+      "status": "done",
+      "templateId": "builtin:devops",
+      "sessionId": "fa187095-6ff1-4323-a598-cb399114967f",
+      "parentId": "orch-user_project-853c73a0",
+      "lastReportAt": "2026-02-28T11:03:46.529Z",
+      "budgetSpent": 0,
+      "createdAt": "2026-02-28T10:42:24.508Z",
+      "updatedAt": "2026-02-28T11:03:52.711Z"
+    },
     {
       "id": "worker-tester-59765ee2",
       "role": "tester",
@@ -64,14 +82,57 @@
       "templateId": null,
       "sessionId": null,
       "parentId": null,
-      "lastReportAt": "2026-02-28T10:40:39.182Z",
+      "lastReportAt": "2026-02-28T11:04:09.040Z",
       "budgetSpent": 0,
       "createdAt": "2026-02-28T10:36:48.556Z",
-      "updatedAt": "2026-02-28T10:41:33.229Z"
+      "updatedAt": "2026-02-28T11:04:09.040Z"
     }
   ],
-  "lessons": [],
+  "lessons": [
+    {
+      "lesson": "Deployment to S3 requires connected EC2 compute peers. When node is in degraded state (healthy:false, no compute peers), POST /v1/projects/:id/deploy returns HTTP 503. Cannot deploy static apps without at least one EC2 node connected to the network.",
+      "source": "worker-devops-570b794d",
+      "confidence": 1,
+      "timesUsed": 0,
+      "relevanceTags": null
+    }
+  ],
   "reflections": [
+    {
+      "level": "task",
+      "trigger": "task_complete",
+      "output": "{\"difficulties\":[],\"suggestions\":[]}",
+      "lessonsCreated": 0,
+      "createdAt": "2026-02-28T11:04:09.039Z"
+    },
+    {
+      "level": "task",
+      "trigger": "task_complete",
+      "output": "{\"difficulties\":[],\"suggestions\":[]}",
+      "lessonsCreated": 0,
+      "createdAt": "2026-02-28T11:01:02.860Z"
+    },
+    {
+      "level": "task",
+      "trigger": "task_complete",
+      "output": "{\"difficulties\":[],\"suggestions\":[]}",
+      "lessonsCreated": 0,
+      "createdAt": "2026-02-28T10:57:32.768Z"
+    },
+    {
+      "level": "task",
+      "trigger": "task_complete",
+      "output": "{\"difficulties\":[],\"suggestions\":[]}",
+      "lessonsCreated": 0,
+      "createdAt": "2026-02-28T10:47:12.739Z"
+    },
+    {
+      "level": "task",
+      "trigger": "task_complete",
+      "output": "{\"difficulties\":[],\"suggestions\":[]}",
+      "lessonsCreated": 0,
+      "createdAt": "2026-02-28T10:42:24.648Z"
+    },
     {
       "level": "task",
       "trigger": "task_complete",
