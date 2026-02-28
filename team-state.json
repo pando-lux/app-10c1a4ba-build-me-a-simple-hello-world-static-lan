@@ -1,0 +1,84 @@
+{
+  "version": 2,
+  "projectId": "10c1a4ba5e5ee89391db4ebb",
+  "exportedAt": 1772275322602,
+  "team": {
+    "blueprint": [
+      {
+        "role": "user_project",
+        "type": "orchestrator",
+        "templateId": null,
+        "children": [
+          {
+            "role": "tester",
+            "type": "worker",
+            "templateId": "builtin:tester"
+          },
+          {
+            "role": "builder",
+            "type": "worker",
+            "templateId": "builtin:builder"
+          }
+        ]
+      }
+    ],
+    "stats": {
+      "totalWorkersSpawned": 2,
+      "totalBudgetSpent": 0,
+      "firstCreated": "2026-02-28T10:36:48.556Z",
+      "lastActive": "2026-02-28T10:41:33.229Z"
+    }
+  },
+  "agents": [
+    {
+      "id": "worker-tester-59765ee2",
+      "role": "tester",
+      "type": "worker",
+      "status": "done",
+      "templateId": "builtin:tester",
+      "sessionId": "62fdf0b6-e6a2-4aa0-bd69-ccb0dd7433c0",
+      "parentId": "orch-user_project-853c73a0",
+      "lastReportAt": null,
+      "budgetSpent": 0,
+      "createdAt": "2026-02-28T10:40:39.090Z",
+      "updatedAt": "2026-02-28T10:41:21.645Z"
+    },
+    {
+      "id": "worker-builder-5705e41c",
+      "role": "builder",
+      "type": "worker",
+      "status": "done",
+      "templateId": "builtin:builder",
+      "sessionId": "6aa18edd-ada9-4097-a628-b869a650427e",
+      "parentId": "orch-user_project-853c73a0",
+      "lastReportAt": null,
+      "budgetSpent": 0,
+      "createdAt": "2026-02-28T10:38:58.317Z",
+      "updatedAt": "2026-02-28T10:39:51.435Z"
+    },
+    {
+      "id": "orch-user_project-853c73a0",
+      "role": "user_project",
+      "type": "orchestrator",
+      "status": "active",
+      "templateId": null,
+      "sessionId": null,
+      "parentId": null,
+      "lastReportAt": "2026-02-28T10:40:39.182Z",
+      "budgetSpent": 0,
+      "createdAt": "2026-02-28T10:36:48.556Z",
+      "updatedAt": "2026-02-28T10:41:33.229Z"
+    }
+  ],
+  "lessons": [],
+  "reflections": [
+    {
+      "level": "task",
+      "trigger": "task_complete",
+      "output": "{\"difficulties\":[],\"suggestions\":[]}",
+      "lessonsCreated": 0,
+      "createdAt": "2026-02-28T10:40:39.182Z"
+    }
+  ],
+  "directives": []
+}
